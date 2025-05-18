@@ -44,7 +44,6 @@ El benchmark ejecuta pruebas con las siguientes variables:
    - Para cada combinación de tamaño de tabla, término de búsqueda y valor top-k:
      - Ejecuta la consulta con y sin índice GIN
      - Registra el tiempo de ejecución y número de resultados
-     - Para tablas muy grandes (>10M filas), solo ejecuta con índice
 
 3. **Recopilación de planes de ejecución:**
    - Guarda los planes de ejecución EXPLAIN ANALYZE para casos seleccionados
