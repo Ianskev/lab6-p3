@@ -17,6 +17,7 @@ El script `run_gin_benchmark.py` realiza pruebas de rendimiento comparativas ent
 ```
 EXPERIMENTOS/
 ├── run_gin_benchmark.py     # Script principal
+├── analyze_plans.py         # Analiza los planes de ejecución
 ├── average_times/           # CSV con tiempos promedio
 ├── performance/             # Gráficos y datos de rendimiento
 ├── plans/                   # Planes de ejecución de PostgreSQL
@@ -27,7 +28,7 @@ EXPERIMENTOS/
 
 El benchmark ejecuta pruebas con las siguientes variables:
 
-- **Tamaños de tabla:** 100, 1,000, 10,000, 100,000, 1,000,000, 10,000,000 filas
+- **Tamaños de tabla:** 100, 1000, 10000, 100000, 1000000, 10000000 filas
 - **Términos de búsqueda:** "health"
 - **Valores top-k:** 5, 10, 15 resultados
 - **Uso de índice:** Con índice GIN vs. Sin índice
@@ -64,6 +65,7 @@ Para ejecutar el benchmark:
 
 ```bash
 python run_gin_benchmark.py
+python analyze_plans.py
 ```
 
 ## Outputs
